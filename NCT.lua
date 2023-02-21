@@ -23,6 +23,7 @@ local function Main()
     if tonumber(Currency.Text) >= 22550 then
         ReplicatedStorage.Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ShopService.RE.PurchaseItem:FireServer("Accessories", "008")
         ReplicatedStorage.Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ShopService.RE.PurchaseItem:FireServer("Accessories", "007")
+        return
     else
         queue_on_teleport(game:HttpGet("https://raw.githubusercontent.com/0x580x540x43/Freebies/main/NCT.lua"))
         game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId,game.JobId, LocalPlayer)
