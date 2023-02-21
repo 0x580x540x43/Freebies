@@ -17,17 +17,16 @@ local function Main()
     GetObbyRewards()
     local Currency = LocalPlayer.PlayerGui.Currency.Amount
 
-    if tonumber(Currency.Text) <= 22550 then
+    if tonumber(Currency.Text) >= 22550 then
         ReplicatedStorage.Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ShopService.RE.PurchaseItem:FireServer("Accessories", "008")
         ReplicatedStorage.Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ShopService.RE.PurchaseItem:FireServer("Accessories", "007")
         return
     else
-    
-	task.wait(2)
+        task.wait(4)
         queue_on_teleport(game:HttpGet("https://raw.githubusercontent.com/0x580x540x43/Freebies/main/NCT.lua"))
         game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId,game.JobId, LocalPlayer)
     end
 end
 
-
-pcall(Main)
+ 
+Main()
