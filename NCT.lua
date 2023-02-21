@@ -7,7 +7,8 @@ local LocalPlayer = Players.LocalPlayer
 local queue_on_teleport = queue_on_teleport or queueonteleport or (syn and syn.queue_on_teleport)
 
 local function GetObbyRewards()
-    for _,v in pairs(workspace.Folder:GetChildren()) do
+    local Folder = workspace:WaitForChild("Folder")
+    for _,v in pairs(Folder:GetChildren()) do
         LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
         task.wait(0.1)
     end
